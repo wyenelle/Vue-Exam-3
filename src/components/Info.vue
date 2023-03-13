@@ -33,7 +33,7 @@
 
 <template>
     <div @click="navigate">
-        <div className="grid grid-cols-5 border border-slate-400 pr-3 ">
+        <div className="grid grid-cols-5 border border-slate-200 pr-3 ">
           <div to={} className="w-full py-4 col-span-4  px-3">
             <div className="flex items-center">
               <h1 className=" my-2 h-auto capitalize">{{ arr  }}  </h1>

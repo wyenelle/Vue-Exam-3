@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div
-                class="col-span-5 md:col-span-4 flex-normal text-center h-10 md:h-full  w-full shadow-lg rounded-md py-4 ">
+                class="col-span-5 md:col-span-4 flex-normal text-center h-10 md:h-full  w-full shadow-md shadow-slate-200 rounded-md py-4 ">
                 <h2 class="h2">Favour Timothy</h2>
             </div>
         </section>
