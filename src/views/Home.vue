@@ -2,32 +2,50 @@
 import Nav from '../components/Nav.vue'
 import Header from '../components/Header.vue'
 import Card from '../components/Card.vue';
-import Head from '../components/Head.vue';
 </script>
 
 <template>
-    <section>
-        <div class="home-bg pb-10">
-            <Nav />
-            <Head />
-            <main class=" md:w-11/12 bg-white/40  md:mx-auto py-3 shadow shadow-gray-300/40 shadow-lg">
-                <div class=" md:w-11/12 md:relative  flex flex-col gap-2 md:mx-auto">
+    <main class="w-full ">
+        <div class="w-full home-bg ">
+            <section class="  bg-white/70 pb-9 md:ml-3 flex-vertical ">
+                <Nav />
+                <Header />
+            </section>
+        </div>
 
-                    <div class="h-screen md:h-96">
-                        <Header />
-                    </div>
+        <section class="w-full h-auto card-container  mt-20 md:mt-20">
+            <div class="flex-vertical bg-white/70">
+                <h2 class="w-8/12 mx-auto bg-white/70 md:bg-none mb-  text-center h2">
+                Curious about what our projects are ? they are ...
+            </h2>
+                <div class="mt-10 md:mt-10 card bg-white/70 md:bg-none">
                     <Card />
                 </div>
-            </main>
-
-        </div>
-    </section>
+            </div>
+            
+                
+        </section>
+    </main>
 </template>
 
 <style scoped>
+
 .home-bg {
-    background-image: linear-gradient(to bottom right, #0047b3, #0047b3, #ccccff);
+    background: url('../assets/images.jpeg');
+    background-position:center;
     background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    /* background-repeat: no-repeat; */
+}
+.card-container{
+        background:url('../assets/sec.png');
+        background-size: cover;
+    }
+@media (min-width:768px){
+    .home-bg{
+        background:url('../assets/lg-bg.png');
+        background-size: cover;
+    }
+    
 }
 </style>

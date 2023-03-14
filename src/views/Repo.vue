@@ -3,15 +3,18 @@
     import Information from '../components/Infomation.vue';
     import Repositories from '../components/Repositories.vue';
     import {useDark,useToggle} from '@vueuse/core'
+    import {useState} from 'vuex-composition-helpers/dist'
 
+    
+    
     const isDark = useDark()
     const toggleDark = useToggle(isDark)
-    const props = defineProps(['arr','loading'])
+    
+    
+    const {app, notLoading} = useState(['app','notLoading'])
 
-    onMounted(() => {
-    console.log(props.loading)
 
-    })
+
     
 </script>
 
@@ -20,10 +23,10 @@
        <div class="w-11/12 mx-auto shadow-md shadow-slate-200">
         <button @click="toggleDark()">click me now</button>
         <Information />
-        <!-- <Repositories v-if="arr" :arr="arr" /> -->
-        <!-- <section v-else class="text-gray-200 h-80 flex-normal text-center ">
+        <Repositories v-if="notLoading" :arr="app" />
+        <section v-else class="text-gray-200 h-80 flex-normal text-center ">
             Loading Repositories
-        </section> -->
+        </section>
        </div>
     </main>
 </template>

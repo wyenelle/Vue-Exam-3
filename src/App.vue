@@ -2,22 +2,22 @@
 import Footer from './components/Footer.vue';
 import { onMounted,ref } from 'vue';
 import { RouterView } from 'vue-router';
+import {useStore} from 'vuex'
 
+const store = useStore()
 
-    const arr = ref([])
-    const loading = ref(true)
+    let arr
     const url = 'https://api.github.com/users/wyenelle/repos'
 
      onMounted(() => {
       const getData = async  () => {
            try{
                const fetch_url = await fetch(url)
-               arr.value = await fetch_url.json()
-               loading.value = false
+               arr = await fetch_url.json()
+               store.commit('fetched',arr)
            } catch (error){
-                arr.value = 'Could not reach API call ' + error 
+                arr = 'Could not reach API call ' + error 
            }
-           console.log(arr.value);
           }
 
           getData()
@@ -28,8 +28,7 @@ import { RouterView } from 'vue-router';
 
 <template>
 
-  <RouterView  :arr="arr" :loading="loading"/>
-  <Footer />
+  <RouterView  />
 </template>
 
 <style scoped>

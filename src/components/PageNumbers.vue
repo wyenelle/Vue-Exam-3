@@ -1,8 +1,7 @@
 <script setup>
 const emits = defineEmits(['number-change'])
-const {arr,arrLength,postPerPage} = defineProps(['arr','arrLength','postPerPage'])
+const {arrLength,postPerPage} = defineProps(['arrLength','postPerPage'])
 
-console.log(arrLength,postPerPage)
 
 let number_of_pages = []
 for(let i = 1; i <= Math.ceil(arrLength / postPerPage);i++){

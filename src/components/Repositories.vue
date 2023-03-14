@@ -8,7 +8,6 @@ const {arr} = defineProps({
   arr:Array
 })
 
-
 const arrLength = arr.length
 const postPerPage = 5
 const currentPage = ref(1) 
@@ -25,8 +24,15 @@ const changePage = (number) => {
 
 
 <template>
-    <div >
+    <div class="wrapper">
         <Info  :arr="num"  v-for="num in currentPost"  :key="num"  />
     </div>
     <PageNumbers @numberChange="changePage" :arr="arr" :arrLength="arrLength" :postPerPage="postPerPage"/>
 </template>
+
+<style scoped>
+    .wrapper{
+        height: 70vh;
+        margin-bottom: 5rem;
+    }
+</style>

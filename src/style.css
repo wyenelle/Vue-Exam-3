@@ -1,14 +1,19 @@
-@tailwind base ;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,700&family=Nunito&display=swap');
+
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 @layer components{
   .btn-normal{
-    @apply bg-black text-white p-4 font-extrabold text-xl rounded-md focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75
+    @apply bg-black text-white p-4 font-extrabold text-xl rounded-md focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75  hover:border-slate-200 hover:shadow-md hover:shadow-slate-400 hover:text-slate-400 outline-none
   }
   .flex-normal{
     @apply flex justify-center items-center
+  }
+  .flex-vertical{
+    @apply flex flex-col justify-between items-center gap-3 md:items-start
   }
   .fine-edge{
     @apply rounded-lg shadow shadow-gray-400/30
@@ -17,7 +22,7 @@
     @apply  my-3 font-extrabold 
   }
   .h2{
-    @apply text-xl my-3 font-extrabold 
+    @apply text-3xl md:text-4xl my-3 font-extrabold drop-shadow-lg
   }
 }
 :root {
@@ -37,14 +42,25 @@
 .card:hover{
 transform: scale(1);
 }
+p,i{
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+}
+h1,h2{
+  font-family: 'Alegreya', serif;
+}
 
 button {
+  transform: scale(0.98);
+  font-family: 'Alegreya', serif;
   border-radius: 8px;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.5s;
 }
 button:hover {
-
+  background-color: white;
+  color: black;
+  transform: scale(1);
 }
 button:focus,
 button:focus-visible {
