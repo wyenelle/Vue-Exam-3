@@ -9,18 +9,14 @@
     }
   )
 
-  const navigate = () => {
-    route.push(`/repo/${arr}`)
-  }
   
 
   
   // console.log(arr);
 
   const {
-        owner: { html_url, login, avatar_url },
+        owner: { html_url, id,login, avatar_url },
         visibility,
-            id,
         name,
         language,
         default_branch,
@@ -28,6 +24,11 @@
         full_name,
       } = arr
     console.log(visibility);
+
+    const navigate = () => {
+    route.push(`/repo/${id}`)
+  }
+  
 </script>
 
 

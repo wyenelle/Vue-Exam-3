@@ -1,8 +1,10 @@
 <script setup>
 import {useRoute,RouterLink} from 'vue-router'
-const {arr} = defineProps({
-    arr:Array
+const {arr,loading} = defineProps({
+    arr:Array,
+    loading:Boolean
 })
+const owner = loading? 
 const route = useRoute()
 const routeid = route.params.id
 const objId = arr.find(elem => elem === routeid)

@@ -11,6 +11,7 @@ export const store = createStore({
         fetched(state,payload){
             state.app = payload
             state.notLoading = true
+            console.log(state.app.value)
         }
     }
 })

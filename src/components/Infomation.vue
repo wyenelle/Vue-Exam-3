@@ -1,10 +1,10 @@
 <script setup>
 import {useState} from 'vuex-composition-helpers/dist'
 
-const {app} = useState(['app'])
-
-const {owner: avatar_url} = app[0]
-console.log(owner );
+// const {app} = useState(['app'])
+// console.log(app.value[0])
+// const {owner: avatar_url} = app.value[0]
+// console.log(owner );
 </script>
 
 

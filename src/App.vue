@@ -18,6 +18,7 @@ const store = useStore()
            } catch (error){
                 arr = 'Could not reach API call ' + error 
            }
+           console.log(arr)
           }
 
           getData()
@@ -29,6 +30,7 @@ const store = useStore()
 <template>
 
   <RouterView  />
+  <Footer />
 </template>
 
 <style scoped>

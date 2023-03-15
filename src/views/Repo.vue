@@ -11,7 +11,7 @@
     const toggleDark = useToggle(isDark)
     
     
-    const {app, notLoading} = useState(['app','notLoading'])
+    const {app, notLoading:loading} = useState(['app','notLoading'])
 
 
 
@@ -23,7 +23,7 @@
        <div class="w-11/12 mx-auto shadow-md shadow-slate-200">
         <button @click="toggleDark()">click me now</button>
         <Information />
-        <Repositories v-if="notLoading" :arr="app" />
+        <Repositories v-if="loading" :arr="app" :loading="loading" />
         <section v-else class="text-gray-200 h-80 flex-normal text-center ">
             Loading Repositories
         </section>
