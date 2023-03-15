@@ -6,9 +6,9 @@ const tech_stack = ['JavaScript', 'React', 'Vue', 'Next', 'Typescript', 'HTML & 
 <template>
     <section class="h-full mt-20  w-full">
         <div class="grid grid-cols-2 h-full ">
-            <div class="col-span-2  h-full flex justify-start items-center">
-                <div class="pl-3 md:text-center md:w-10/12 md:mx-auto md:flex flex-col justify-center items-center " data-aos="fade-in" data-aos-delay="1000">
-                    <h1 class=" text-5xl font-extrabold w-7/12 md:w-full drop-shadow-lg drop-shadow-slate-200  mb-4 ">
+            <div class="col-span-2  h-full  ">
+                <div class="py-4 gap-3 text-center md:w-10/12 md:mx-auto flex flex-col justify-center items-center  " data-aos="fade-in" data-aos-delay="1000">
+                    <h1 class="text-5xl md:text-7xl font-extrabold w-7/12 md:w-full drop-shadow-lg drop-shadow-slate-200  mb-4 ">
                         Discover the best <span class="text-blue-500"> projects</span>. <span class='hidden md:block'> Meet
                             real life projects in one place.</span>
                     </h1>

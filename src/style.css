@@ -22,7 +22,7 @@
     @apply  my-3 font-extrabold 
   }
   .h2{
-    @apply text-3xl md:text-4xl my-3 font-extrabold drop-shadow-lg
+    @apply text-4xl md:text-5xl my-3 font-extrabold 
   }
 }
 :root {
@@ -55,7 +55,7 @@ button {
   font-family: 'Alegreya', serif;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 button:hover {
   background-color: white;
