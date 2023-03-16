@@ -4,10 +4,11 @@ const {arr,loading} = defineProps({
     arr:Array,
     loading:Boolean
 })
-const owner = loading? 
+console.log(arr)
+// const owner = loading? app.
 const route = useRoute()
 const routeid = route.params.id
-const objId = arr.find(elem => elem === routeid)
+// const objId = arr.find(elem => elem === routeid)
 </script>
 
 <template>

@@ -7,7 +7,7 @@ import { ref, watch, computed } from 'vue'
 const {arr} = defineProps({
   arr:Array
 })
-
+console.log(arr)
 const arrLength = arr.length
 const postPerPage = 5
 const currentPage = ref(1) 

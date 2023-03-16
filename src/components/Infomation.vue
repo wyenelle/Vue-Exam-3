@@ -1,7 +1,11 @@
 <script setup>
 import {useState} from 'vuex-composition-helpers/dist'
 
-// const {app} = useState(['app'])
+const {arr} = defineProps({
+    arr:Object
+})
+const {login,avatar_url} = arr.owner
+console.log()
 // console.log(app.value[0])
 // const {owner: avatar_url} = app.value[0]
 // console.log(owner );
@@ -12,13 +16,14 @@ import {useState} from 'vuex-composition-helpers/dist'
     <div class="h-auto flex-col flex-normal">
         <section class="grid grid-cols-5 border border-slate-200 h-40 w-full">
             <div class="col-span-5 md:col-span-1  border border-slate-200 w-full">
-                <div class="avatar md:hidden border-slate-400 border mx-auto">
-                    <img :src="avatar_url" alt="profile picture" />
+                <img :src="avatar_url" alt="profile picture" class="w-full h-full" />
+                <div class=" md:hidden border-slate-400 border mx-auto">
+                    <img :src="avatar_url" alt="profile picture" class="avatar" />
                 </div>
             </div>
             <div
                 class="col-span-5 md:col-span-4 flex-normal text-center h-10 md:h-full  w-full shadow-md shadow-slate-200 rounded-md py-4 ">
-                <h2 class="h2">Favour Timothy</h2>
+                <h2 class="h2">{{ login }}</h2>
             </div>
         </section>
     </div>
