@@ -15,8 +15,9 @@
   // console.log(arr);
 
   const {
-        owner: { html_url, id,login, avatar_url },
+        owner: { html_url,login, avatar_url },
         visibility,
+        id,
         name,
         language,
         default_branch,
