@@ -31,7 +31,7 @@ const store = useStore()
 <template>
 
   <RouterView  />
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <style scoped>

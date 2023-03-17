@@ -38,7 +38,7 @@
         <div className="grid grid-cols-5 border border-slate-200 pr-3 ">
           <div to={} className="w-full py-4 col-span-4  px-3">
             <div className="flex items-center">
-              <h1 className=" my-2 h-auto capitalize">{{ name }}  </h1>
+              <h1 className=" my-2 h-auto text-2xl capitalize">{{ name }}  </h1>
               <p className=" ml-3 h-auto border rounded-lg px-2 py-1">
                  {{ visibility  }}  
                </p>

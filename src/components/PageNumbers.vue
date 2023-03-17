@@ -11,7 +11,7 @@ for(let i = 1; i <= Math.ceil(arrLength / postPerPage);i++){
 
 <template>
     
-    <div class="flex-normal px-2 h-10 py-3 mt-5 ">
+    <div class="flex-normal px-2 h-10 py-5  ">
         <!-- <button class="border border-slate-200 rounded-md p-2 font-bold " @click="backPage">
         prev
     </button> -->

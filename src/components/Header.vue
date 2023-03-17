@@ -22,9 +22,11 @@ const tech_stack = ['JavaScript', 'React', 'Vue', 'Next', 'Typescript', 'HTML & 
                             {{ item }}
                         </i>
                     </div>
-                    <button class="btn-normal md:mt-6">
+                    <RouterLink to="/repo">
+                        <button class="btn-normal md:mt-6">
                         Explore
                     </button>
+                    </RouterLink>
                 </div>
             </div>
 

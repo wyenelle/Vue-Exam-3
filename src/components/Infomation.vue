@@ -13,11 +13,15 @@ console.log()
 
 
 <template>
-    <div class="h-auto flex-col flex-normal">
+    <div class="h-auto flex-col  flex-normal">
         <section class="grid grid-cols-5 border border-slate-200 h-40 w-full">
-            <div class="col-span-5 md:col-span-1  border border-slate-200 w-full">
-                <img :src="avatar_url" alt="profile picture" class="w-full h-full" />
-                <div class=" md:hidden border-slate-400 border mx-auto">
+            <div class="col-span-5 md:col-span-1 overflow-hidden  w-full">
+                <div class=" h-full">
+                    <img :src="avatar_url" alt="profile picture" class="w-full object-cover h-full  hidden md:block" />
+                </div>
+            </div>
+            <div class=" md:hidden col-span-5  w-full mx-auto ">
+                <div class="flex justify-center items-center">
                     <img :src="avatar_url" alt="profile picture" class="avatar" />
                 </div>
             </div>

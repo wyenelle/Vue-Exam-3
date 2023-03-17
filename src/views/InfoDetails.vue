@@ -51,8 +51,11 @@ const msg = '<span  class="text-gray-300"> No description for this repo</span>'
                 </p>
               </a>
             </div>
-            <div>
-              <h3 v-if="description" class="text-xl font-extrabold p-3">
+            <div class=" p-1">
+              <h1 class="text-2xl">
+                Description
+              </h1>
+              <h3 v-if="description" class="text-xl italic font-light p-3">
                 {{ description }}
               </h3>
               <h3 v-else v-html="msg" class="">
@@ -88,7 +91,10 @@ const msg = '<span  class="text-gray-300"> No description for this repo</span>'
 
       <div class="col-span-1 hidden md:block">
         <div class="flex flex-col justify-center items-center h-full w-full">
-
+          <img :src="avatar_url" alt="photo" class="" />
+          <h1 class="text-3xl">
+              {{ login }}
+          </h1>
         </div>
 
       </div>

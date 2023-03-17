@@ -24,15 +24,25 @@ const changePage = (number) => {
 
 
 <template>
-    <div class="wrapper">
-        <Info  :arr="num"  v-for="num in currentPost"  :key="num"  />
+    <main class="pb-4 ">
+        <div class="wrapper">
+            <div class="w-full h-full bg-white/70">
+                <Info  :arr="num"  v-for="num in currentPost"  :key="num"  />
+            </div>
+        </div>
+        <PageNumbers @numberChange="changePage" :arr="arr" :arrLength="arrLength" :postPerPage="postPerPage"/>
+    </main>
+    <div class="h-40">
+
     </div>
-    <PageNumbers @numberChange="changePage" :arr="arr" :arrLength="arrLength" :postPerPage="postPerPage"/>
 </template>
 
 <style scoped>
     .wrapper{
-        height: 70vh;
+        height: auto;
         margin-bottom: 5rem;
+        background: url('../assets/software.png');
+        background-size: cover;
+        background-position: center;
     }
 </style>
