@@ -26,7 +26,7 @@
   }
 }
 :root {
-  font-family: "Tilt Warp",Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
 
   text-rendering: optimizeLegibility;

@@ -18,7 +18,7 @@ for(let i = 1; i <= Math.ceil(arrLength / postPerPage);i++){
         prev
     </button>
     <ul  class=" flex-normal gap-2 px-3">
-        <li @click="emits('number-change', num)" v-for="num in number_of_pages" :key="num" class="border border-slate-200 rounded-md p-2 font-bold dark:text-sky-400"> {{ num }}</li>
+        <li @click="emits('number-change', num)" v-for="num in number_of_pages" :key="num" class="border border-slate-200 rounded-md p-2 font-bold dark:text-sky-400 cursor-pointer focus:text-xl"> {{ num }}</li>
     </ul>
     <button class="border border-slate-200 h-10 text-xl outline-none rounded-md p-2 font-bold " @click="emits('next')">
         next
