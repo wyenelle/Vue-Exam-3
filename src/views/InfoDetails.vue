@@ -18,7 +18,7 @@ const {
   html_url,
 } = objId
 const desc = ''
-const msg = '<span  class="text-gray-300"> No description for this repo</span>'
+const msg = '<span  class=""> No description for this repo</span>'
 
 </script>
 
@@ -58,7 +58,7 @@ const msg = '<span  class="text-gray-300"> No description for this repo</span>'
               <h3 v-if="description" class="text-xl italic font-light p-3">
                 {{ description }}
               </h3>
-              <h3 v-else v-html="msg" class="">
+              <h3 v-else v-html="msg" class="text-xl italic font-light p-3">
 
               </h3>
 
