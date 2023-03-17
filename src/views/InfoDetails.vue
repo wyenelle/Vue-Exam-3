@@ -17,7 +17,7 @@ const {
   clone_url,
   html_url,
 } = objId
-
+const desc = ''
 const msg = '<span  class="text-gray-300"> No description for this repo</span>'
 
 </script>
@@ -36,17 +36,17 @@ const msg = '<span  class="text-gray-300"> No description for this repo</span>'
 
     </div>
 
-    <div class="grid grid-cols-2 border-4 border-red-500">
-      <div class="col-span-2 md:col-span-1">
+    <div class="grid grid-cols-2 ">
+      <div class="col-span-2 md:col-span-1 bg-png">
 
-        <div class="h-auto md:w-8/12 md:mx-auto   flex flex-col gap-4 ">
+        <div class="h-auto md:w-8/12 md:mx-auto bg-white/80  flex flex-col gap-4 ">
 
           <div class=" flex flex-col items-center gap-5    h-4/5 px-3">
 
-            <div class=" text-center mt-3">
-              <h1 class="text-4xl mt-3"> {{ name }} </h1>
+            <div class=" text-center md:text-start mt-3">
+              <h1 class="text-4xl mt-3 capitalize"> {{ name }} </h1>
               <a :href="html_url" title="Visit this repository">
-                <p class="text-gray-500 my-3 font-bold text-xl">
+                <p class="text-gray-700 my-3 font-extrabold text-xl">
                   Go to repo
                 </p>
               </a>
@@ -68,7 +68,7 @@ const msg = '<span  class="text-gray-300"> No description for this repo</span>'
               <h1 class="text-2xl">Details</h1>
               <div class="flex flex-col justify-around gap-5">
                 <p>
-                  Written mainly with <b>{{ language }}</b> along with other dependent technologies.
+                  {{ language ? `Written in ${language}`: 'This is an empty repository' }}
                 </p>
                 <p>
                   This repository is <b>{{ visibility }}</b> to all who wish to clone or fork.
@@ -90,7 +90,7 @@ const msg = '<span  class="text-gray-300"> No description for this repo</span>'
 
 
       <div class="col-span-1 hidden md:block">
-        <div class="flex flex-col justify-center items-center h-full w-full">
+        <div class="flex flex-col justify-center gap-5 items-center h-full w-full">
           <img :src="avatar_url" alt="photo" class="" />
           <h1 class="text-3xl">
               {{ login }}
@@ -103,9 +103,10 @@ const msg = '<span  class="text-gray-300"> No description for this repo</span>'
   </main>
 </template>
 <style scoped>
-.body-wrapper {
-  background: url('../assets/svg.svg');
+.bg-png {
+  background: url('../assets/software.png');
   background-size: cover;
+  background-position: center;
 }
 </style>
  

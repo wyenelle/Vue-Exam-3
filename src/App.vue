@@ -18,7 +18,6 @@ const store = useStore()
            } catch (error){
                 arr = 'Could not reach API call ' + error 
            }
-           console.log(arr)
            
           }
 
