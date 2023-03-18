@@ -1,7 +1,7 @@
 <script setup>
 import Info from './Info.vue'
 import PageNumbers from './PageNumbers.vue'
-import { ref, watch, computed } from 'vue'
+import {ref, computed } from 'vue'
 
 
 const { arr } = defineProps({

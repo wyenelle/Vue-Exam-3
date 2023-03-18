@@ -34,7 +34,7 @@
 
 
 <template>
-    <div @click="navigate" class="wrapper-info my-3">
+    <div @click="navigate" class="wrapper-info py-3 my-5">
         <div className="grid grid-cols-5 border border-slate-200 pr-3 ">
           <div to={} className="w-full py-4 col-span-4  px-3">
             <div className="flex items-center">
